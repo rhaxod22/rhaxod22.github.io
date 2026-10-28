@@ -229,6 +229,11 @@ section h2 {
 .pub:last-child { border-bottom: 0; }
 .pub-title { font-weight: 600; font-size: 1.02rem; line-height: 1.45; }
 .pub-authors { color: var(--muted); }
+.pub-authors .me {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
 .pub-venue { color: var(--muted); font-style: italic; }
 .pub-links {
   display: flex;
