@@ -1,0 +1,294 @@
+/* ---------- 색상과 글꼴 (여기만 바꾸면 전체 분위기가 바뀝니다) ---------- */
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --text: #1c1f24;
+  --muted: #5d6673;
+  --faint: #868e99;
+  --rule: #e7e3db;
+  --accent: #1f5f8b;
+  --accent-soft: #e6eff6;
+
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --maxw: 760px;
+}
+
+/* 다크 모드: 방문자의 OS 설정을 따름 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121418;
+    --surface: #1a1d22;
+    --text: #e7e9ec;
+    --muted: #a3abb6;
+    --faint: #7f8792;
+    --rule: #2a2f36;
+    --accent: #8cc3ec;
+    --accent-soft: #1a2a37;
+  }
+}
+
+/* ---------- 기본 ---------- */
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16.5px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+a:hover { text-decoration: underline; }
+
+p { margin: 0 0 14px; }
+.muted { color: var(--muted); }
+
+/* ---------- 상단 메뉴 ---------- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+.site-nav .inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text);
+  white-space: nowrap;
+}
+.brand:hover { text-decoration: none; }
+.brand img { border-radius: 5px; }
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 22px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.site-nav ul a {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.site-nav ul a:hover { color: var(--text); text-decoration: none; }
+
+/* ---------- 본문 ---------- */
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 56px 20px 32px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 168px 1fr;
+  gap: 36px;
+  align-items: center;
+}
+.hero img {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+.native-name {
+  font-weight: 400;
+  font-size: 1.35rem;
+  color: var(--muted);
+  margin-left: 0.2em;
+}
+.role { margin: 0; font-size: 1.05rem; }
+.affil { margin: 0 0 18px; color: var(--muted); }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 13px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: border-color 0.15s, color 0.15s;
+}
+.links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+.links svg { width: 16px; height: 16px; flex: none; }
+
+section { margin-top: 56px; }
+section h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.45rem;
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+}
+.interests li {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+/* 날짜 + 내용 두 칸 목록 (Talks, Teaching, Education) */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.timeline li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  padding: 10px 0;
+}
+.date {
+  color: var(--faint);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  padding-top: 2px;
+}
+
+/* 논문 목록 */
+.pubs { list-style: none; padding: 0; margin: 0; }
+.pub {
+  padding: 16px 0;
+  border-bottom: 1px dashed var(--rule);
+}
+.pub:first-child { padding-top: 4px; }
+.pub:last-child { border-bottom: 0; }
+.pub-title { font-weight: 600; font-size: 1.02rem; line-height: 1.45; }
+.pub-authors { color: var(--muted); }
+.pub-venue { color: var(--muted); font-style: italic; }
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 7px;
+}
+.pub-links a {
+  padding: 1px 9px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.pub-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+.tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 7px;
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: 2px;
+}
+
+/* ---------- 하단 ---------- */
+footer {
+  max-width: var(--maxw);
+  margin: 40px auto 0;
+  padding: 24px 20px 48px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--faint);
+  font-size: 0.85rem;
+}
+
+/* ---------- 휴대폰 화면 ---------- */
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .site-nav .inner { padding: 0 16px; }
+  .brand { display: none; }
+  .site-nav ul { width: 100%; justify-content: space-between; gap: 12px; }
+  .site-nav ul a { font-size: 0.86rem; }
+  main { padding: 36px 16px 24px; }
+  .hero { grid-template-columns: 1fr; gap: 20px; }
+  .hero img { width: 112px; height: 112px; }
+  .hero h1 { font-size: 2rem; }
+  section { margin-top: 44px; }
+  .timeline li { grid-template-columns: 1fr; gap: 0; }
+  footer { margin: 32px 16px 0; padding: 20px 0 40px; }
+}

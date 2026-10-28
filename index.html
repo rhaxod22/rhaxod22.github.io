@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seonghun Park</title>
+  <meta name="description" content="Seonghun Park — M.S. student at the KAIST School of Computing, interested in formalized mathematics and extremal combinatorics.">
+  <meta property="og:title" content="Seonghun Park">
+  <meta property="og:description" content="M.S. student at the KAIST School of Computing, interested in formalized mathematics and extremal combinatorics.">
+  <meta property="og:url" content="https://rhaxod22.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="inner">
+      <a class="brand" href="#top"><img src="assets/favicon.svg" alt="" width="20" height="20">Seonghun Park</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#talks">Talks</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ===================== 상단 소개 ===================== -->
+    <header class="hero">
+      <!-- TODO: 사진 파일을 assets/ 에 넣고 src 를 바꾸세요 (예: assets/profile.jpg, 정사각형 권장) -->
+      <img src="assets/profile.svg" alt="Photo of Seonghun Park" width="168" height="168">
+      <div>
+        <!-- 한글 이름을 같이 쓰려면: <h1>Seonghun Park <span class="native-name">(한글 이름)</span></h1> -->
+        <h1>Seonghun Park</h1>
+        <p class="role">M.S. Student</p>
+        <p class="affil">School of Computing, KAIST</p>
+        <ul class="links">
+          <li>
+            <a href="mailto:hun57@kaist.ac.kr">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+              Email
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/rhaxod22">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ===================== About ===================== -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am an M.S. student in the School of Computing at
+        <a href="https://www.kaist.ac.kr/en/">KAIST</a>, advised by
+        Hongseok Yang. I also received my B.S. there in 2025, with a double
+        major in Mathematical Sciences. I am interested in formalized mathematics
+        and extremal combinatorics, and currently work on machine-checked flag
+        algebra proofs in the Lean theorem prover.
+      </p>
+      <ul class="interests" aria-label="Research interests">
+        <li>Formalized mathematics</li>
+        <li>Interactive theorem proving</li>
+        <li>Flag algebras</li>
+        <li>Extremal graph theory</li>
+      </ul>
+    </section>
+
+    <!-- ===================== Publications ===================== -->
+    <section id="publications">
+      <h2>Publications &amp; Preprints</h2>
+      <!--
+        논문 하나 = li 하나. 아래 블록을 복사해서 맨 위에 추가하세요.
+        상태 표시: <span class="tag">Preprint</span>, <span class="tag">Under review</span> 등
+      -->
+      <ol class="pubs" reversed>
+        <li class="pub">
+          <div class="pub-title">A New Upper Bound for the Turán Density of the Tetrahedron <span class="tag">Preprint</span></div>
+          <div class="pub-authors">Gyeongwon Jeong, Seonghun Park, Seonghyuk Im, Joonkyung Lee, Hongseok Yang</div>
+          <div class="pub-venue">arXiv:2609.27495, 2026</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2609.27495">arXiv</a>
+            <a href="https://arxiv.org/pdf/2609.27495">PDF</a>
+            <a href="https://github.com/taeyool/tetrahedron-turan">Code</a>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-title">Formalizing Flag Algebras in Lean <span class="tag">Preprint</span></div>
+          <div class="pub-authors">Gyeongwon Jeong, Seonghun Park, Jihoon Hyun, Sang-il Oum, Hongseok Yang</div>
+          <div class="pub-venue">arXiv:2607.23500, 2026</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2607.23500">arXiv</a>
+            <a href="https://arxiv.org/pdf/2607.23500">PDF</a>
+            <a href="https://github.com/taeyool/lean-flag-algebras-release">Code</a>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-title">An Introduction to Razborov’s Flag Algebra as a Proof System for Extremal Graph Theory <span class="tag">Preprint</span></div>
+          <div class="pub-authors">Gyeongwon Jeong, Seonghun Park, Hongseok Yang</div>
+          <div class="pub-venue">arXiv:2601.12741, 2026</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2601.12741">arXiv</a>
+            <a href="https://arxiv.org/pdf/2601.12741">PDF</a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===================== Talks ===================== -->
+    <section id="talks">
+      <h2>Talks</h2>
+      <ul class="timeline">
+        <li>
+          <span class="date">Feb 2026</span>
+          <span><strong>Formalizing Flag Algebras in the Lean Theorem Prover</strong><br><span class="muted">Discrete Mathematics Seminar, Institute for Basic Science (IBS), Daejeon</span></span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== Teaching ===================== -->
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <p class="muted">Teaching assistant at KAIST.</p>
+      <ul class="timeline">
+        <li>
+          <span class="date">Fall 2026</span>
+          <span><strong>CS311</strong> Computer Organization</span>
+        </li>
+        <li>
+          <span class="date">Fall 2025</span>
+          <span><strong>CS502</strong> Theory of Programming Languages <span class="tag">Outstanding TA Award</span></span>
+        </li>
+        <li>
+          <span class="date">Spring 2025</span>
+          <span><strong>CS402</strong> Introduction to Logic for Computer Science <span class="tag">Outstanding TA Award</span></span>
+        </li>
+        <li>
+          <span class="date">Spring 2025<br>Fall 2023</span>
+          <span><strong>HSS105</strong> Logic</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== Education ===================== -->
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="timeline">
+        <li>
+          <span class="date">2025 – present</span>
+          <span><strong>M.S., School of Computing</strong>, KAIST<br><span class="muted">Advisor: Hongseok Yang</span></span>
+        </li>
+        <li>
+          <span class="date">2020 – 2025</span>
+          <span><strong>B.S., School of Computing</strong>, KAIST<br><span class="muted">Double major in Mathematical Sciences</span></span>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>&copy; 2026 Seonghun Park</span>
+    <span>Last updated: October 2026</span>
+  </footer>
+
+</body>
+</html>
